@@ -42,10 +42,16 @@ Every rule is CASE-INSENSITIVE
             "kickMessage": "This warning message will override the default message.\n\nForbidden: %FORBIDDEN%",    
         },
         {
-            "description": "Kicks every player whose username does not contain at least 3 latin letter",
+            "description": "Kicks every player whose username does not contain at least any three (3) consecutive latin letters",
             "type": "regex",
             "logic": "match=allow",
             "rule": "/[a-z]{3,}/"
+        },
+        {
+            "description": "Kicks every player whose username does not contain at least any three (3) latin letters",
+            "type": "regex",
+            "logic": "match=allow",
+            "rule": "/([a-z][^a-z]*?){3}/"
         },
         {
             "description": "",
